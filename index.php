@@ -25,6 +25,8 @@ switch ($act) {
         Сообщение об ошибке 404
         -----------------------------------------------------------------
         */
+        
+        $textl = 'error404';
         $headmod = 'error404';
         require('incfiles/head.php');
         echo functions::display_error($lng['error_404']);
@@ -38,6 +40,8 @@ switch ($act) {
         */
         if (isset($_SESSION['ref']))
             unset($_SESSION['ref']);
+        
+        $textl = 'welcome';
         $headmod = 'mainpage';
         require('incfiles/head.php');
         include 'pages/mainmenu.php';
